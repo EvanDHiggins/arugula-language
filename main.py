@@ -1,8 +1,7 @@
 from antlr4 import *
 from ArugulaLexer import ArugulaLexer
 from ArugulaParser import ArugulaParser
-from ArugulaListener import ArugulaListener
-from MyArugulaVisitor import MyArugulaVisitor
+from PythonGenerator import MyArugulaVisitor
 import sys
 
 def pdir(a, printhidden=False):
@@ -19,7 +18,7 @@ def main(argv):
     parser = ArugulaParser(stream)
     tree = parser.prog()
 
-    visitor = MyArugulaVisitor()
+    visitor = PythonGenerator()
     visitor.visit(tree)
 
 if __name__ == '__main__':
