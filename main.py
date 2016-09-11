@@ -1,8 +1,8 @@
 from antlr4 import *
-from ExprLexer import ExprLexer
-from ExprParser import ExprParser
-from ExprListener import ExprListener
-from MyExprVisitor import MyExprVisitor
+from ArugulaLexer import ArugulaLexer
+from ArugulaParser import ArugulaParser
+from ArugulaListener import ArugulaListener
+from MyArugulaVisitor import MyArugulaVisitor
 import sys
 
 def pdir(a, printhidden=False):
@@ -14,12 +14,12 @@ def pdir(a, printhidden=False):
 
 def main(argv):
     ip = FileStream(argv[1])
-    lexer = ExprLexer(ip)
+    lexer = ArugulaLexer(ip)
     stream = CommonTokenStream(lexer)
-    parser = ExprParser(stream)
+    parser = ArugulaParser(stream)
     tree = parser.prog()
 
-    visitor = MyExprVisitor()
+    visitor = MyArugulaVisitor()
     visitor.visit(tree)
 
 if __name__ == '__main__':

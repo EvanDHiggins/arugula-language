@@ -1,11 +1,11 @@
 # Generated from java-escape by ANTLR 4.5
 from antlr4 import *
-from ExprVisitor import ExprVisitor
+from ArugulaVisitor import ArugulaVisitor
 import copy
 
 # This class defines a complete generic visitor for a parse tree produced by ExprParser.
 
-class MyExprVisitor(ExprVisitor):
+class MyArugulaVisitor(ArugulaVisitor):
 
     def __init__(self):
         self.variableLookup = {}

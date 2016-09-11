@@ -1,4 +1,4 @@
-grammar Expr;
+grammar Arugula;
 
 prog: stat+ ;
 
