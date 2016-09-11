@@ -1,0 +1,5 @@
+*.swp
+assign.txt
+input.txt
+__pycache__
+
