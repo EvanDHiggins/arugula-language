@@ -1,7 +1,7 @@
 from antlr4 import *
 from ArugulaLexer import ArugulaLexer
 from ArugulaParser import ArugulaParser
-from PythonGenerator import MyArugulaVisitor
+from ArugulaCGenerator import ArugulaCGenerator
 import sys
 
 def pdir(a, printhidden=False):
@@ -16,10 +16,10 @@ def main(argv):
     lexer = ArugulaLexer(ip)
     stream = CommonTokenStream(lexer)
     parser = ArugulaParser(stream)
-    tree = parser.prog()
+    programRootNode = parser.prog()
 
-    visitor = PythonGenerator()
-    visitor.visit(tree)
+    visitor = ArugulaCGenerator(argv[1].replace('.ag', '.c'))
+    visitor.visit(programRootNode)
 
 if __name__ == '__main__':
     main(sys.argv)

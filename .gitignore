@@ -3,3 +3,6 @@ assign.txt
 input.txt
 __pycache__
 OldExprVisitor.py
+
+input.c
+input.ag

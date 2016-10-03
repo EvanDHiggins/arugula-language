@@ -3,7 +3,7 @@ grammar Arugula;
 prog: stat+ ;
 
 stat:   expr END            # printExpr
-    |   ID '=' expr END     # assign
+    |   ID ID '=' expr END  # assign
     |   END                 # blank
     ;
 

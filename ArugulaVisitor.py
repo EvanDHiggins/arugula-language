@@ -20,23 +20,8 @@ class ArugulaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by ArugulaParser#clear.
-    def visitClear(self, ctx):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by ArugulaParser#blank.
     def visitBlank(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#define.
-    def visitDefine(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#call.
-    def visitCall(self, ctx):
         return self.visitChildren(ctx)
 
 
@@ -62,26 +47,6 @@ class ArugulaVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by ArugulaParser#int.
     def visitInt(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#multparam.
-    def visitMultparam(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#singleparam.
-    def visitSingleparam(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#multarg.
-    def visitMultarg(self, ctx):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by ArugulaParser#singlearg.
-    def visitSinglearg(self, ctx):
         return self.visitChildren(ctx)
 
 
